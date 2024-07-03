@@ -153,16 +153,16 @@ class MaxHeap {
     public void maxHeapify(int i) {
         int l = left(i);
         int r = right(i);
-        int smallest = i;
-        if (l < size && heap[l] > heap[smallest]) {
-            smallest = l;
+        int largest = i;
+        if (l < size && heap[l] > heap[largest]) {
+            largest = l;
         }
-        if (r < size && heap[r] > heap[smallest]) {
-            smallest = r;
+        if (r < size && heap[r] > heap[largest]) {
+            largest = r;
         }
-        if (smallest != i) {
-            swap(i, smallest);
-            maxHeapify(smallest);
+        if (largest != i) {
+            swap(i, largest);
+            maxHeapify(largest);
         }
 
     }
@@ -171,11 +171,11 @@ class MaxHeap {
             size--;
             return heap[0];
         }
-        int min=heap[0];
+        int max=heap[0];
         heap[0]=heap[size-1];
         size--;
         maxHeapify(0);
-        return min;
+        return max;
 
     }
 

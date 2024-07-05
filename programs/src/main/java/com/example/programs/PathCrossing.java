@@ -32,7 +32,7 @@ import java.util.Set;
 
 public class PathCrossing {
     public static void main(String[] arr){
-        System.out.println(new PathCrossing().isPathCrossing());
+        System.out.println(new PathCrossing().isPathCrossing("NSEW"));
     }
 
         public boolean isPathCrossing(String path) {

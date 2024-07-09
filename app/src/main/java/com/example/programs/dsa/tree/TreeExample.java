@@ -2,7 +2,7 @@ package com.example.programs.dsa.tree;
 
 public class TreeExample {
     public static void main(String[] arr){
-        BinaryTree tree= new Binary(1);
+        BinaryTree tree= new BinaryTree(1);
         tree.add(3);
         tree.add(7);
         tree.add(2);
@@ -54,7 +54,7 @@ class BinaryTree {
     }
 
     public void add(int value){
-       root= insertNode(rootNode,value);
+       rootNode= insertNode(rootNode,value);
     }
 
 
@@ -70,7 +70,7 @@ class BinaryTree {
                 return root;
             }
         }
-        return current;
+        return root;
 
     }
 

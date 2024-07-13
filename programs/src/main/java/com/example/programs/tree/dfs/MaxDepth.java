@@ -1,4 +1,4 @@
-package com.example.programs.tree;
+package com.example.programs.tree.dfs;
 
 public class MaxDepth {
 

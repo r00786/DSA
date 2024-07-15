@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class PreOrderTraversalIterative {
+public class GraphIterativeTraversal {
     public static void main(String[] args) {
-        System.out.println(new PreOrderTraversalIterative().preOrderTraversal(Utils.arrayToTree(new Integer[]{3, 7, 2, 6, 1, 9})));
-        System.out.println(new PreOrderTraversalIterative().postOrderTraversal(Utils.arrayToTree(new Integer[]{3, 7, 2, 6, 1, 9})));
-        System.out.println(new PreOrderTraversalIterative().inOrderTraversal(Utils.arrayToTree(new Integer[]{3, 7, 2, 6, 1, 9})));
+        System.out.println(new GraphIterativeTraversal().preOrderTraversal(Utils.arrayToTree(new Integer[]{3, 7, 2, 6, 1, 9})));
+        System.out.println(new GraphIterativeTraversal().postOrderTraversal(Utils.arrayToTree(new Integer[]{3, 7, 2, 6, 1, 9})));
+        System.out.println(new GraphIterativeTraversal().inOrderTraversal(Utils.arrayToTree(new Integer[]{3, 7, 2, 6, 1, 9})));
 
     }
 

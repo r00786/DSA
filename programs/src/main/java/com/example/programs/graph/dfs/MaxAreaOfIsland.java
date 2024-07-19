@@ -1,4 +1,4 @@
-package com.example.programs.graph;
+package com.example.programs.graph.dfs;
 
 import java.util.Stack;
 

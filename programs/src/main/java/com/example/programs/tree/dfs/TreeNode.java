@@ -13,4 +13,13 @@ package com.example.programs.tree.dfs;
           this.left = left;
           this.right = right;
       }
+
+      public static void printPreorder(TreeNode node) {
+          if (node == null) {
+              return;
+          }
+          System.out.print(node.val + " ");
+          printPreorder(node.left);
+          printPreorder(node.right);
+      }
   }

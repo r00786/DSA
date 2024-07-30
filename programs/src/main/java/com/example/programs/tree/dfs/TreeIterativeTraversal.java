@@ -10,6 +10,7 @@ public class TreeIterativeTraversal {
     public static void main(String[] args) {
         System.out.println(new TreeIterativeTraversal().preOrderTraversal(Utils.arrayToTree(new Integer[]{3, 7, 2, 6, 1, 9})));
         System.out.println(new TreeIterativeTraversal().postOrderTraversal(Utils.arrayToTree(new Integer[]{3, 7, 2, 6, 1, 9})));
+        System.out.println(new TreeIterativeTraversal().postOrderTraversal2(Utils.arrayToTree(new Integer[]{3, 7, 2, 6, 1, 9})));
         System.out.println(new TreeIterativeTraversal().inOrderTraversal(Utils.arrayToTree(new Integer[]{3, 7, 2, 6, 1, 9})));
 
     }
@@ -58,6 +59,29 @@ public class TreeIterativeTraversal {
         return list;
 
     }
+
+    public List<Integer> postOrderTraversal2(TreeNode treeNode){
+        List<Integer> list = new ArrayList<>();
+        Stack<TreeNode> stack= new Stack<>();
+        TreeNode current=treeNode,lastRightNode=null;
+        while (current!=null || !stack.isEmpty()){
+            while (current!=null){
+                stack.add(current);
+                current=current.left;
+            }
+            current= stack.peek();
+            if(current.right!=lastRightNode&&current.right!=null){
+                current=current.right;
+                continue;
+            }
+            stack.pop();
+            list.add(current.val);
+            lastRightNode=current;
+            current=null;
+        }
+        return list;
+    }
+
 
 
     public List<Integer> inOrderTraversal(TreeNode treeNode){

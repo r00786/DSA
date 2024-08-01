@@ -1,5 +1,7 @@
 package com.example.programs.tree.dfs;
 
+import com.example.programs.Utils;
+
 /**
  * url - https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/
  * Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
@@ -36,10 +38,13 @@ package com.example.programs.tree.dfs;
  */
 
 public class LowestCommonAncestor {
+    public static void main(String[] args) {
+        System.out.println(new LowestCommonAncestor().lowestCommonAncestor(Utils.arrayToTree(new Integer[]{6,2,8,0,4,7,9,null,null,3,5}),0,3).val);
+    }
 
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    public TreeNode lowestCommonAncestor(TreeNode root, int p, int q) {
         if(root==null)return null;
-        if(root==p||root==q){
+        if(root.val==p||root.val==q){
             return root;
         }
         TreeNode left= lowestCommonAncestor(root.left,p,q);

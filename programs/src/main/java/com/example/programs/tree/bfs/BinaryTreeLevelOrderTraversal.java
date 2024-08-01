@@ -1,4 +1,4 @@
-package com.example.programs.tree.bst;
+package com.example.programs.tree.bfs;
 
 import com.example.programs.tree.dfs.TreeNode;
 

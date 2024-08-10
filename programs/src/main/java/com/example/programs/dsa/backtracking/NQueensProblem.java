@@ -1,7 +1,7 @@
 package com.example.programs.dsa.backtracking;
 
 public class NQueensProblem {
-    public int N = 8;
+    public int N = 4;
 
     public boolean isSafeToInsertQueen(int row, int col,boolean[] colCount, boolean[] normalDiag, boolean[] reverseDiag)
 

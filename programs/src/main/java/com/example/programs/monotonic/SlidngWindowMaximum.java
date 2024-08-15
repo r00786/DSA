@@ -36,6 +36,9 @@ import java.util.ArrayDeque;
  * 1 <= k <= nums.length
  */
 public class SlidngWindowMaximum {
+    public static void main(String[] args) {
+        System.out.println(new SlidngWindowMaximum().maxSlidingWindow(new int[]{1,3,-1,-3,5,3,6,7},3));
+    }
 
 
     public int[] maxSlidingWindow(int[] nums, int k) {
